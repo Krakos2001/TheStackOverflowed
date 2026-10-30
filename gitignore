@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Node / web (in case the project goes that way)
+node_modules/
+dist/
+
+# Builds and saves
+build/
+*.log
+saves/

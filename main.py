@@ -1,0 +1,2 @@
+# Starts the game
+pass
