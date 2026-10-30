@@ -63,6 +63,7 @@ Run instructions will be added once `main.py` exists.
 
 ## Project Organisation:
 
+```
 thestackoverflowed/
 ├── README.md
 ├── INTERFACE.md
@@ -101,3 +102,4 @@ thestackoverflowed/
     ├── test_interpreter.py
     ├── test_smelter_rules.py
     └── test_integration.py
+```
