@@ -64,13 +64,12 @@ Run instructions will be added once `main.py` exists.
 ## Project Organisation:
 
 ```
-thestackoverflowed/
+TheStackOverflowed/
 ├── README.md
 ├── INTERFACE.md
 ├── requirements.txt
 ├── .gitignore
 ├── main.py                  # entry point: starts the game
-│
 ├── game/                    # Dev A: simulation + rendering
 │   ├── __init__.py
 │   ├── world.py             # grid, map, expansion
@@ -82,7 +81,6 @@ thestackoverflowed/
 │       ├── renderer.py      # drawing the map, player, machines
 │       ├── hud.py           # inventories, status messages
 │       └── editor.py        # in-game code editor
-│
 ├── interpreter/             # Dev B: no pygame imports in here
 │   ├── __init__.py
 │   ├── parser.py            # ast.parse wrapper + friendly errors
@@ -91,13 +89,10 @@ thestackoverflowed/
 │   ├── limits.py            # instruction counter, loop protection
 │   ├── errors.py            # ScriptError types with line numbers
 │   └── validation.py        # runs building tests against a script
-│
 ├── scripts/                 # default player-facing scripts (the simulated .py files)
 │   ├── Player.py
 │   └── Smelter.py
-│
 ├── assets/                  # sprites, sounds, fonts
-│
 └── tests/
     ├── test_interpreter.py
     ├── test_smelter_rules.py
