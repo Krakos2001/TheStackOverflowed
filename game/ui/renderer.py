@@ -20,7 +20,7 @@ class Renderer:
                 if self.world.map[x][y] == " ":
                     pygame.draw.rect(self.screen, TILE_COLOR, ((x * self.tile_size), (y * self.tile_size), self.tile_size, self.tile_size))
                     pygame.draw.rect(self.screen, GRID_COLOR, ((x * self.tile_size), (y * self.tile_size), self.tile_size, self.tile_size), 2)
-                elif self.world.map[x][y] == "ore":
+                elif self.world.map[x][y] == "iron_ore":
                     pygame.draw.rect(self.screen, ORE_COLOR, ((x * self.tile_size), (y * self.tile_size), self.tile_size, self.tile_size))
                     pygame.draw.rect(self.screen, GRID_COLOR, ((x * self.tile_size), (y * self.tile_size), self.tile_size, self.tile_size), 2)
         PLAYER_ICON_RADIUS = self.tile_size // 2 - 10

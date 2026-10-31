@@ -14,13 +14,13 @@ class Player:
         new_x, new_y = self.x + dx, self.y + dy
         if world.exists(new_x, new_y): # Checks that the square exists
             self.x, self.y = new_x, new_y
-            self.stop_mining
+            self.stop_mining()
             return True
         return False
 
 
     def start_mining(self):
-        self.mining == True
+        self.mining = True
 
     def stop_mining(self):
         self.mining_progress = 0
