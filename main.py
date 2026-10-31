@@ -10,7 +10,7 @@ renderer = Renderer(world, 96)
 clock = pygame.time.Clock()
 running = True
 
-world.map[0][0] = "ore"
+world.map[0][0] = "iron_ore"
 
 while running:
     for event in pygame.event.get():   # Receive everything that happened (keypresses, etc...)
@@ -26,7 +26,14 @@ while running:
                 player.move(-1, 0, world)
             elif key == pygame.K_RIGHT:
                 player.move(1, 0, world)
-    clock.tick(60)
+            elif key == pygame.K_SPACE:
+                player.start_mining()
+        elif event.type == pygame.KEYUP:
+            key = event.key
+            if key == pygame.K_SPACE:
+                player.stop_mining()
+    dt = clock.tick(60) / 1000
+    player.mine(world, dt)
     renderer.draw(player)
 
 pygame.quit()

@@ -12,3 +12,6 @@ class World:
 
     def exists(self, x, y):
         return 0 <= x < self.width and 0 <= y < self.height
+
+    def tile_state(self, x, y):
+        return self.map[x][y]
