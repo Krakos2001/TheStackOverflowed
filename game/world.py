@@ -1,9 +1,9 @@
 class World:
     def __init__(self, x_length, y_length):
         MAP = []
-        for i in range(y_length):
+        for i in range(x_length):
             line = []
-            for j in range(x_length):
+            for j in range(y_length):
                 line.append(" ")
             MAP.append(line)
         self.map = MAP
