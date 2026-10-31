@@ -10,6 +10,7 @@ renderer = Renderer(world, 96)
 clock = pygame.time.Clock()
 running = True
 
+world.map[0][0] = "ore"
 
 while running:
     for event in pygame.event.get():   # Receive everything that happened (keypresses, etc...)
@@ -25,6 +26,6 @@ while running:
                 player.move(-1, 0, world)
             elif key == pygame.K_RIGHT:
                 player.move(1, 0, world)
-    renderer.draw(player)
+    renderer.draw(world, player)
 
 pygame.quit()
