@@ -12,14 +12,14 @@ class Renderer:
         self.tile_size = tile_size
         self.screen = pygame.display.set_mode((world.width * tile_size, world.height * tile_size))
 
-    def draw(self, world, player):
+    def draw(self, player):
         self.screen.fill(BACKGROUND_COLOR)
-        for y in range(self.world.height):
-            for x in range(self.world.width):   # For every point of the map, draw the big inside rect and the outline one
-                if world.map[x][y] == "":
+        for x in range(self.world.height):
+            for y in range(self.world.width):   # For every point of the map, draw the big inside rect and the outline one
+                if self.world.map[x][y] == " ":
                     pygame.draw.rect(self.screen, TILE_COLOR, ((x * self.tile_size), (y * self.tile_size), self.tile_size, self.tile_size))
                     pygame.draw.rect(self.screen, GRID_COLOR, ((x * self.tile_size), (y * self.tile_size), self.tile_size, self.tile_size), 2)
-                elif world.map[x][y] == "ore":
+                elif self.world.map[x][y] == "ore":
                     pygame.draw.rect(self.screen, ORE_COLOR, ((x * self.tile_size), (y * self.tile_size), self.tile_size, self.tile_size))
                     pygame.draw.rect(self.screen, GRID_COLOR, ((x * self.tile_size), (y * self.tile_size), self.tile_size, self.tile_size), 2)
         pygame.draw.rect(self.screen, PLAYER_COLOR, ((player.x * self.tile_size), (player.y * self.tile_size), self.tile_size, self.tile_size)) # Draws the player

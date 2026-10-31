@@ -3,7 +3,7 @@ from game.player import Player
 from game.ui.renderer import Renderer
 import pygame
 
-
+pygame.init()
 world = World(5, 5)
 player = Player(2, 2)
 renderer = Renderer(world, 96)
@@ -26,6 +26,7 @@ while running:
                 player.move(-1, 0, world)
             elif key == pygame.K_RIGHT:
                 player.move(1, 0, world)
-    renderer.draw(world, player)
+    clock.tick(60)
+    renderer.draw(player)
 
 pygame.quit()
