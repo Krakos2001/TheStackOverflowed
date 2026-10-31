@@ -8,5 +8,6 @@ class Player:
     def move(self, dx, dy, world):
         new_x, new_y = self.x + dx, self.y + dy
         if world.exists(new_x, new_y): # Checks that the square exists
-            self.x, self.y = new_x, self.y
+            self.x, self.y = new_x, new_y
             return True
+        return False
